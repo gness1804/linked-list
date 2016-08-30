@@ -63,6 +63,15 @@ function checkEmpty() {
 //If user omits 'title' or 'URL' display error message upon clicking submit
 
 //PHASE THREE
+$(document).on('keyup', disableButton()
+);
+
+
+function disableButton() {
+  if ( (titleField === '') || (urlField === '') ){
+    $('.submit').disabled = true;
+  }
+}
 
 //Disable button for creating links IF A field is blank
 //Application should keep count of total number of links once they are submitted or removed
