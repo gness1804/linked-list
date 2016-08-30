@@ -7,6 +7,9 @@ var urlField = $('.url').val();
 $('.submit').click( function() {
   titleField = $('.title').val();
   urlField = $('.url').val();
+  if (checkEmpty()) {
+    return;
+  }
   createBookmark(titleField, urlField);
 });
 
@@ -22,9 +25,6 @@ $(document).on('click', '.mark', function() {
 $(document).on('click', '.remove-mark', function () {
   $(this).parent().remove();
 });
-
-
-
 
 //former body of function
 // if ($(this).parent().hasClass(".read")) {
@@ -46,6 +46,20 @@ $('.remove').click( function() {
 
 //PHASE TWO
 
+function checkEmpty() {
+  if ((titleField === '') && (urlField === '')) {
+    alert('ERROR: PLEASE FILL IN BOTH FIELDS');
+    return true;
+  }
+  if (titleField === '') {
+    alert('ERROR: TITLE HAS BEEN OMITTED');
+    return true;
+  }
+  if (urlField === '') {
+    alert('ERROR: URL HAS BEEN OMITTED');
+    return true;
+  }
+}
 //If user omits 'title' or 'URL' display error message upon clicking submit
 
 //PHASE THREE
