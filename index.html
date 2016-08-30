@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="scripts.js"></script>
     <link rel="stylesheet" style="text/css" href="reset.css"/>
     <!--Google fonts link if wanted, available from https://fonts.google.com -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -12,6 +11,20 @@
     <title></title>
   </head>
   <body>
-    <input type="Text" value="Title">
+    <h1> A Linked List </h1>
+      <input type="text" value="Title" class="title">
+      <!-- Input field for URL -->
+      <input type="url" value="URL" class="url">
+      <!-- Button for submitting bookmark -->
+      <button type="button" class="submit"> Submit! </button>
+    <section class="bookmark-list">
+      <!-- Bookmarks start populating here -->
+      <!-- Potentially formatted as table -->
+    </section>
+    <!-- "Mark as Read" Button -->
+    <button type="button" class="mark-read"> Mark as Read! </button>
+    <!-- "Remove" Button -->
+    <button type="button" class="remove"> Remove! </button>
+    <script src="scripts.js"></script>
   </body>
 </html>
