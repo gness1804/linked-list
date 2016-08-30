@@ -12,11 +12,8 @@ $('.submit').click( function() {
 });
 
 function createBookmark(x, y) {
-  var newBookmark = "<section class='bookmark'><p class='titleResult'>"+titleField+"</p><p class='urlResult'>"+urlField+"</p></section>";
+  var newBookmark = "<section class='bookmark'><p class='titleResult'>"+titleField+"</p><p class='urlResult'>"+urlField+"</p></section><br><button type='button'>Mark as Read?</button>";
   $('.bookmark-list').append(newBookmark);
-    // $('.bookmark')
-    // $('.titleResult').text(x);
-    // $('.urlResult').text(y);
 }
 
 
