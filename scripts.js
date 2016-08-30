@@ -15,15 +15,29 @@ function createBookmark(x, y) {
   $('.bookmark-list').append(newBookmark);
 }
 
-
 // User clicks on "Mark as Read", class of '.read' is added to the title
-$('.mark-read').click( function() {
-  $('.bookmark').addClass('read');
-});
+// $('.mark').click( function() {
+//   debugger;
+//   if ($(".bookmark").hasClass(".read")) {
+//     alert("hi");
+//   }
+//   else if (!$(".bookmark").hasClass(".read")) {
+//     $(this).addClass('read');
+//   }
+// });
 
 $(document).on('click', '.mark', function() {
-  $(this).parent().addClass('read');
+  if ($(this).parent().hasClass(".read")) {
+    $(this).parent().removeClass("read");
+  }
+  else if (!$(this).parent().hasClass(".read")) {
+    $(this).parent().addClass("read");
+  }
 });
+
+
+
+// $(this).parent().addClass('read');
 
 // If bookmark has class of '.read' class should be removed
 
@@ -46,4 +60,4 @@ $('.remove').click( function() {
 //PHASE FOUR
 //Add a "clear read bookmarks" button which clears bookmarks
 //User should not allow invalid 'URL' inputs
-});
+}); // end of master jQuery function
