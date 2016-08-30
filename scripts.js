@@ -27,15 +27,18 @@ function createBookmark(x, y) {
 // });
 
 $(document).on('click', '.mark', function() {
-  if ($(this).parent().hasClass(".read")) {
-    $(this).parent().removeClass("read");
-  }
-  else if (!$(this).parent().hasClass(".read")) {
-    $(this).parent().addClass("read");
-  }
+  $(this).parent().toggleClass("read");
 });
 
 
+
+//former body of function
+// if ($(this).parent().hasClass(".read")) {
+//   $(this).parent().removeClass("read");
+// }
+// else if (!$(this).parent().hasClass(".read")) {
+//   $(this).parent().addClass("read");
+// }
 
 // $(this).parent().addClass('read');
 
