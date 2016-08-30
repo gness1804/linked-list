@@ -8,11 +8,10 @@ $('.submit').click( function() {
   titleField = $('.title').val();
   urlField = $('.url').val();
   createBookmark(titleField, urlField);
-  debugger;
 });
 
 function createBookmark(x, y) {
-  var newBookmark = "<section class='bookmark'><p class='titleResult'>"+titleField+"</p><p class='urlResult'>"+urlField+"</p></section><br><button type='button'>Mark as Read?</button>";
+  var newBookmark = "<section class='bookmark'><p class='titleResult'>"+titleField+"</p><p class='urlResult'>"+urlField+"</p><button type='button' class='mark'>Mark as Read?</button></section>";
   $('.bookmark-list').append(newBookmark);
 }
 
@@ -20,6 +19,11 @@ function createBookmark(x, y) {
 // User clicks on "Mark as Read", class of '.read' is added to the title
 $('.mark-read').click( function() {
   $('.bookmark').addClass('read');
+});
+
+$(document).on('click', '.mark', function() {
+  $(this).parent().addClass('read');
+  debugger;
 });
 // If bookmark has class of '.read' class should be removed
 
