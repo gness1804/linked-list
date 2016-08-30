@@ -1,24 +1,35 @@
 $(document).ready(function() {
 // PHASE ONE
 // User can input a title and URL into appropriate fields and when submit button is clicked, bookmark populates appropriate section
-var titleField;
-var urlField;
+var titleField = $('.title').val();
+var urlField = $('.url').val();
 
 $('.submit').click( function() {
   var titleField = $('.title').val();
   var urlField = $('.url').val();
   createBookmark(titleField, urlField);
+  debugger;
 });
 
 function createBookmark(x, y) {
-  $('.titleResult').text(x);
-  $('.urlResult').text(y);
+  $('.bookmark-list').append(newBookmark);
+    // $('.bookmark')
+    // $('.titleResult').text(x);
+    // $('.urlResult').text(y);
 }
-// User clicks on "Mark as Read"
-// A class of '.read' is added to bookmark
+
+var newBookmark = "<section class='bookmark'><p class='titleResult'>"+titleField+"</p><p class='urlResult'>"+urlField+"</p></section>";
+
+// User clicks on "Mark as Read", class of '.read' is added to the title
+$('.mark-read').click( function() {
+  $('.bookmark').addClass('read');
+});
 // If bookmark has class of '.read' class should be removed
 
 //User clicks on "Remove"
+$('.remove').click( function() {
+  $('.bookmark').remove();
+});
 //Link should be removed from the page
 
 //PHASE TWO
