@@ -5,20 +5,20 @@ var titleField = $('.title').val();
 var urlField = $('.url').val();
 
 $('.submit').click( function() {
-  var titleField = $('.title').val();
-  var urlField = $('.url').val();
+  titleField = $('.title').val();
+  urlField = $('.url').val();
   createBookmark(titleField, urlField);
   debugger;
 });
 
 function createBookmark(x, y) {
+  var newBookmark = "<section class='bookmark'><p class='titleResult'>"+titleField+"</p><p class='urlResult'>"+urlField+"</p></section>";
   $('.bookmark-list').append(newBookmark);
     // $('.bookmark')
     // $('.titleResult').text(x);
     // $('.urlResult').text(y);
 }
 
-var newBookmark = "<section class='bookmark'><p class='titleResult'>"+titleField+"</p><p class='urlResult'>"+urlField+"</p></section>";
 
 // User clicks on "Mark as Read", class of '.read' is added to the title
 $('.mark-read').click( function() {
