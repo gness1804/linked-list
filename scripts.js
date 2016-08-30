@@ -11,24 +11,18 @@ $('.submit').click( function() {
 });
 
 function createBookmark(x, y) {
-  var newBookmark = "<section class='bookmark'><p class='titleResult'>"+titleField+"</p><p class='urlResult'>"+urlField+"</p><button type='button' class='mark'>Mark as Read?</button></section>";
+  var newBookmark = "<section class='bookmark'><p class='titleResult'>"+titleField+"</p><p class='urlResult'>"+urlField+"</p><button type='button' class='mark'>Mark as Read?</button><button class='remove-mark'>Remove Link</button></section>";
   $('.bookmark-list').append(newBookmark);
 }
-
-// User clicks on "Mark as Read", class of '.read' is added to the title
-// $('.mark').click( function() {
-//   debugger;
-//   if ($(".bookmark").hasClass(".read")) {
-//     alert("hi");
-//   }
-//   else if (!$(".bookmark").hasClass(".read")) {
-//     $(this).addClass('read');
-//   }
-// });
 
 $(document).on('click', '.mark', function() {
   $(this).parent().toggleClass("read");
 });
+
+$(document).on('click', '.remove-mark', function () {
+  $(this).parent().remove();
+});
+
 
 
 
