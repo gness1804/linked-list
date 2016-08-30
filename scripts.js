@@ -23,8 +23,8 @@ $('.mark-read').click( function() {
 
 $(document).on('click', '.mark', function() {
   $(this).parent().addClass('read');
-  debugger;
 });
+
 // If bookmark has class of '.read' class should be removed
 
 //User clicks on "Remove"
