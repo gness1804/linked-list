@@ -1,13 +1,14 @@
+//Enables jQuery
 $(document).ready(function() {
-
-var titleField = $('.title').val();
-var urlField = $('.url').val();
-
+//Global variables for input fields
+// var titleField = $('.title').val();
+// var urlField = $('.url').val();
+//Toggles submit button from disabled to enabled
 $(document).on('load', enableOrDisableButtons());
 $('.title, .url').on('keyup keydown', function () {
   enableOrDisableButtons();
 });
-
+//If both fields are not empty (i.e. 'truthy') enable button
 function enableOrDisableButtons() {
   if ($('.title').val() && $('.url').val()) {
     $('.submit').prop("disabled", false);
@@ -17,7 +18,7 @@ function enableOrDisableButtons() {
   }
 }
 
-$('.submit').click( function() { //when they press the static submit button
+$('.submit').click( function() { //Static submit functionality
   titleField = $('.title').val();
   urlField = $('.url').val();
   if (checkEmpty()) {
@@ -26,19 +27,10 @@ $('.submit').click( function() { //when they press the static submit button
   createBookmark(titleField, urlField);
 });
 
-function createBookmark(x, y) { // creates a section containing the new bookmark and the bookmark itself
+function createBookmark(x, y) { // creates a section containing the new bookmark, the bookmark itself, and the new buttons
   var newBookmark = "<section class='bookmark'><p class='titleResult'>"+titleField+"</p><p class='urlResult'>"+urlField+"</p><button type='button' class='mark'>Mark as Read?</button><button type='button' class='remove-mark'>Remove Link</button></section>";
   $('.bookmark-list').append(newBookmark);
-  // addBookmarkToCounter();
 }
-
-var count = 0; // to count the number of links on the page, or the number of times the addBookmarkToCounter function gets fired
-var readCount = 0;
-
-// function addBookmarkToCounter() { // adds to the count of bookmarks on page
-//   count = count + 1;
-//   $("#how-many-bookmarks").text(count);
-// }
 
 $(document).on('click', '.mark', function() { //marks bookmarks as read or unread
   $(this).parent().toggleClass("read");
@@ -47,16 +39,12 @@ $(document).on('click', '.mark', function() { //marks bookmarks as read or unrea
 
 $(document).on('click', '.remove-mark', function () { // they click on "Remove Link" button
   $(this).parent().remove();
-  // removeBookmarkFromCounter();
+  countTotalBookmarks();
   determineCountOfReadAndUnread();
 });
 
-// function removeBookmarkFromCounter() {
-//   count = count - 1;
-//   $("#how-many-bookmarks").text(count);
-// }
 
-$("#testReadAndUnread").click(function () {
+$("#testReadAndUnread").click(function () { //Read and Unread Button functionality
   determineCountOfReadAndUnread();
 });
 
@@ -67,12 +55,7 @@ function determineCountOfReadAndUnread() {
   $("#totalUnread").text(totalUnread + " " + "bookmarks remain unread.");
 }
 
-// function increaseReadCounter() {
-//   readCount = readCount + 1;
-//   $("#tally-of-read-bookmarks").text(readCount);
-// }
-
-$("#buttonCountBookmarks").on("click", function() {
+$("#buttonCountBookmarks").on("click",  function() { //counts bookmarks on click
   countTotalBookmarks();
   });
 
