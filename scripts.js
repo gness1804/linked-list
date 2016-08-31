@@ -107,7 +107,6 @@ function disableButton() {
   }
 }
 function enableButton() {
-  debugger;
   if ( ($('.title').val() !== '') && ($('.url').val() !== '') ) {
     $('.submit').prop("disabled", false);
   }
