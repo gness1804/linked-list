@@ -13,9 +13,12 @@ header {
 }
 .bookmark-list {
   padding: 20px;
+  
+  justify-content: flex-start;
+  flex-flow: column wrap;
+}
+.bookmark {
   display: flex;
-  flex-flow: column, wrap;
-
 }
 .read {
   color: magenta;
