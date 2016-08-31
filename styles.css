@@ -121,6 +121,7 @@ footer section {
 
 button[type=button]:hover {
   cursor: pointer;
+  border: 3px solid #284907;
 }
 
 .footer-directions {
