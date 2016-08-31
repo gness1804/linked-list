@@ -80,4 +80,5 @@ h1 {
 
 button[type=button]:hover {
   cursor: pointer;
+  border: 3px solid #284907;
 }

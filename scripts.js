@@ -85,6 +85,7 @@ function checkEmpty() { // data verification that user added input to both field
     alert('ERROR: URL HAS BEEN OMITTED');
     return true;
   }
+  if (urlField !== validURL())
 }
 
 //PHASE THREE
@@ -99,7 +100,6 @@ function disableButton() {
   }
 }
 function enableButton() {
-  debugger;
   if ( ($('.title').val() !== '') && ($('.url').val() !== '') ) {
     $('.submit').prop("disabled", false);
   }
@@ -112,4 +112,12 @@ function enableButton() {
 //PHASE FOUR
 //Add a "clear read bookmarks" button which clears bookmarks
 //App should not allow invalid 'URL' inputs
+// function validURL() {
+//   var urlRegEx = ^(https?|ftp)://[^\s/$.?#].[^\s]*$@iS;
+//   if ($('.url').val() !== urlRegEx) {
+//     return false
+//   }
+//   return true;
+// };
+
 }); // end of master jQuery function
