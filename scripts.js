@@ -102,7 +102,10 @@ function checkEmpty() { // data verification that user added input to both field
     alert('ERROR: URL HAS BEEN OMITTED');
     return true;
   }
-  if (urlField !== validURL())
+  if (urlField !== validURL()) {
+    alert('ERROR: NOT VALID URL');
+    return true;
+  }
 }
 
 //PHASE THREE
@@ -128,13 +131,19 @@ function enableButton() {
 
 //PHASE FOUR
 //Add a "clear read bookmarks" button which clears bookmarks
-//App should not allow invalid 'URL' inputs
-// function validURL() {
-//   var urlRegEx = ^(https?|ftp)://[^\s/$.?#].[^\s]*$@iS;
-//   if ($('.url').val() !== urlRegEx) {
-//     return false
-//   }
-//   return true;
-// };
+
+//REGEX EXPLANATION
+//(^|\s) ensures not matching url embed in a string
+//(https?:\/\/)? matches the http or https
+//[\w-]+(\.[\w-]+)+\.?  matches the domain name with a trailing dot
+//(:\d+)? matches the port
+//(\/\S*)?) matches the path
+function validURL() {
+  var urlRegEx = /(^|\s)((https?:\/\/)?[\w-]+(\.[\w-]+)+\.?(:\d+)?(\/\S*)?)/;
+  if ($('.url').val() === urlRegEx) {
+    return false;
+  }
+  return true;
+}
 
 }); // end of master jQuery function
