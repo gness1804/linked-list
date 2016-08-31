@@ -63,13 +63,12 @@ function checkEmpty() {
 //If user omits 'title' or 'URL' display error message upon clicking submit
 
 //PHASE THREE
-$(document).on('keyup', disableButton()
-);
+$(document).on('load', disableButton());
 
 
 function disableButton() {
   if ( (titleField === '') || (urlField === '') ){
-    $('.submit').disabled = true;
+    $('.submit').prop("disabled", true);
   }
 }
 
