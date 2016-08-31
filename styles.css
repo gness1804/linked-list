@@ -26,7 +26,13 @@ h1 {
   flex-wrap: wrap;
   overflow: scroll;
   font-family: 'Noto Serif', serif;
-
+}
+.bookmark-list h3 {
+  width: 100%;
+  font-size: 1em;
+  font-weight: bold;
+  margin-left: .5em;
+  margin-bottom: .5em;
 }
 .bookmark {
   padding: .2em;
