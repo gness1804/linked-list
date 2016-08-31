@@ -64,11 +64,19 @@ function checkEmpty() {
 
 //PHASE THREE
 $(document).on('load', disableButton());
+$('.title, .url').on('click', enableButton());
+
 
 
 function disableButton() {
   if ( (titleField === '') || (urlField === '') ){
     $('.submit').prop("disabled", true);
+  }
+}
+function enableButton() {
+  debugger;
+  if ( ($('.title').val() !== '') && ($('.url').val() !== '') ) {
+    $('.submit').prop("disabled", false);
   }
 }
 
