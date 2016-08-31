@@ -2,23 +2,33 @@
 /* MAYBE FLEXBOXES */
 body {
   font-family: 'Work Sans', sans-serif;
+  margin: 15px;
 }
-header {
+header, footer {
   padding: 15px;
   display: flex;
   justify-content: space-around;
   border: 3px solid darkblue;
   border-radius: 5%;
-  margin: 15px;
+  margin: 10px 0 10px 0;
+}
+h1 {
+  flex: 2;
+  font-size: 2em;
+  font-weight: bold;
 }
 .bookmark-list {
-  padding: 20px;
-  
-  justify-content: flex-start;
-  flex-flow: column wrap;
+  max-height: 80%;
+  padding: 15px;
+  display: flex;
+  border: 3px solid darkgreen;
+  flex-flow: column wrap;;
 }
 .bookmark {
+
   display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
 }
 .read {
   color: magenta;
