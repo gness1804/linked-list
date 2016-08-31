@@ -1,10 +1,9 @@
 $(document).ready(function() {
-// PHASE ONE
-// User can input a title and URL into appropriate fields and when submit button is clicked, bookmark populates appropriate section
+
 var titleField = $('.title').val();
 var urlField = $('.url').val();
 
-$('.submit').click( function() {
+$('.submit').click( function() { //when they press the static submit button
   titleField = $('.title').val();
   urlField = $('.url').val();
   if (checkEmpty()) {
@@ -13,7 +12,7 @@ $('.submit').click( function() {
   createBookmark(titleField, urlField);
 });
 
-function createBookmark(x, y) {
+function createBookmark(x, y) { // creates a section containing the new bookmark and the bookmark itself
   var newBookmark = "<section class='bookmark'><p class='titleResult'>"+titleField+"</p><p class='urlResult'>"+urlField+"</p><button type='button' class='mark'>Mark as Read?</button><button class='remove-mark'>Remove Link</button></section>";
   $('.bookmark-list').append(newBookmark);
 }
@@ -26,27 +25,13 @@ $(document).on('click', '.remove-mark', function () {
   $(this).parent().remove();
 });
 
-//former body of function
-// if ($(this).parent().hasClass(".read")) {
-//   $(this).parent().removeClass("read");
-// }
-// else if (!$(this).parent().hasClass(".read")) {
-//   $(this).parent().addClass("read");
-// }
-
-// $(this).parent().addClass('read');
-
-// If bookmark has class of '.read' class should be removed
-
-//User clicks on "Remove"
-$('.remove').click( function() {
+$('.remove').click( function() { //User clicks on "Remove"
   $('.bookmark').remove();
 });
-//Link should be removed from the page
 
 //PHASE TWO
 
-function checkEmpty() {
+function checkEmpty() { // data verification that user added input to both fields
   if ((titleField === '') && (urlField === '')) {
     alert('ERROR: PLEASE FILL IN BOTH FIELDS');
     return true;
@@ -60,35 +45,22 @@ function checkEmpty() {
     return true;
   }
 }
-//If user omits 'title' or 'URL' display error message upon clicking submit
 
 //PHASE THREE
 $(document).on('load', enableOrDisableButtons());
-$('.title').on('keyup', enableOrDisableButtons());
+$('.title').on('keyup keydown', enableOrDisableButtons());
 
 
 function enableOrDisableButtons() {
-  if ($('.title').val() && $('.url').val()) {
-    $('.submit').prop("disabled", false);
-    // alert("hi");
-  }
-  else {
-    $('.submit').prop("disabled", true);
-  }
+  // if ($('.title').val() && $('.url').val()) {
+  //   $('.submit').prop("disabled", false);
+  //   // alert("hi");
+  // }
+  // else {
+  //   $('.submit').prop("disabled", true);
+  // }
+  alert('hi');
 }
-
-
-// function disableButton() {
-//   if ( (titleField === '') || (urlField === '') ){
-//     $('.submit').prop("disabled", true);
-//   }
-// }
-// function enableButton() {
-//   debugger;
-//   if ( ($('.title').val() !== '') && ($('.url').val() !== '') ) {
-//     $('.submit').prop("disabled", false);
-//   }
-// }
 
 //Disable button for creating links IF A field is blank
 //Application should keep count of total number of links once they are submitted or removed
@@ -96,5 +68,5 @@ function enableOrDisableButtons() {
 
 //PHASE FOUR
 //Add a "clear read bookmarks" button which clears bookmarks
-//User should not allow invalid 'URL' inputs
+//App should not allow invalid 'URL' inputs
 }); // end of master jQuery function
