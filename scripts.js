@@ -102,7 +102,7 @@ function checkEmpty() { // data verification that user added input to both field
     alert('ERROR: URL HAS BEEN OMITTED');
     return true;
   }
-  if (urlField !== validURL()) {
+  if (validURL()) {
     alert('ERROR: NOT VALID URL');
     return true;
   }
@@ -132,18 +132,10 @@ function enableButton() {
 //PHASE FOUR
 //Add a "clear read bookmarks" button which clears bookmarks
 
-//REGEX EXPLANATION
-//(^|\s) ensures not matching url embed in a string
-//(https?:\/\/)? matches the http or https
-//[\w-]+(\.[\w-]+)+\.?  matches the domain name with a trailing dot
-//(:\d+)? matches the port
-//(\/\S*)?) matches the path
-// '?' denotes a "nongreedy" matching pattern;
+//REGEX
 function validURL() {
-  var urlRegEx = new RegExp('^(https?:\/\/)?'+ //protocal
-'((([a-z\d]([a-z\d-]*[a-z\d])*)\.)+[a-z]{2,}|'+ //domain name
-'((\:\d+)?(\/[-a-z\d%_.~+]*)*'); // port and path
-  if ($('.url').val() === urlRegEx) {
+  var urlRegEx = new RegExp(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g);
+  if (urlRegEx.test($('.url').val())) {
     return false;
   }
   return true;
