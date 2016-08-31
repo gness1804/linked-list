@@ -3,6 +3,20 @@ $(document).ready(function() {
 var titleField = $('.title').val();
 var urlField = $('.url').val();
 
+$(document).on('load', enableOrDisableButtons());
+$('.title, .url').on('keyup keydown', function () {
+  enableOrDisableButtons();
+});
+
+function enableOrDisableButtons() {
+  if ($('.title').val() && $('.url').val()) {
+    $('.submit').prop("disabled", false);
+  }
+  else {
+    $('.submit').prop("disabled", true);
+  }
+}
+
 $('.submit').click( function() { //when they press the static submit button
   titleField = $('.title').val();
   urlField = $('.url').val();
@@ -47,20 +61,6 @@ function checkEmpty() { // data verification that user added input to both field
 }
 
 //PHASE THREE
-$(document).on('load', enableOrDisableButtons());
-$('.title').on('keyup keydown', enableOrDisableButtons());
-
-
-function enableOrDisableButtons() {
-  // if ($('.title').val() && $('.url').val()) {
-  //   $('.submit').prop("disabled", false);
-  //   // alert("hi");
-  // }
-  // else {
-  //   $('.submit').prop("disabled", true);
-  // }
-  alert('hi');
-}
 
 //Disable button for creating links IF A field is blank
 //Application should keep count of total number of links once they are submitted or removed
