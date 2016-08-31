@@ -32,6 +32,7 @@ footer section {
   border-radius: 5%;
   border: 3px solid darkgreen;
   justify-content: center;
+  align-items: flex-start;
   flex-wrap: wrap;
   overflow: scroll;
   font-family: 'Noto Serif', serif;
@@ -50,7 +51,6 @@ footer section {
   border-radius: 5%;
   background-color: white;
   border: .5px solid black;
-  align-items: center;
   margin-left: .5em;
   margin-bottom: .5em;
   font-family: 'Noto Serif', serif;
@@ -115,8 +115,22 @@ footer section {
 }
 
 @media screen and (max-width: 550px) {
+  header {
+    text-align: center;
+  }
+  .title, .url, .submit {
+    display: inline-block;
+    width: 60%;
+    text-align: center;
+    margin: 1vh 0 1vh 0;
+  }
   .bookmark {
     width: 80%;
+    max-height: 100px;
+    align-items: flex-start;
+  }
+  .bookmark-list {
+    height: 55vh;
   }
   footer section{
     display: flex;
@@ -130,11 +144,4 @@ footer section {
   }
   #clear-read-buttons, #mark-all-read-button {
   }
-  /*footer-direction {
-    display: block;
-  }
-  button {
-    display: block;
-    float: none;
-  }*/
 }
