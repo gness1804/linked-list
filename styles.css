@@ -72,6 +72,10 @@ h1 {
   margin-left: 20px;
 }
 
+#buttonCountBookmarks {
+  margin: 15px 0;
+}
+
 .titleResult, .urlResult{
   font-size: .8em;
   display: block;
@@ -104,4 +108,8 @@ h1 {
 
 button[type=button]:hover {
   cursor: pointer;
+}
+
+.footer-directions {
+  font-style: italic;
 }
