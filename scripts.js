@@ -63,8 +63,8 @@ function checkEmpty() {
 //If user omits 'title' or 'URL' display error message upon clicking submit
 
 //PHASE THREE
-$(document).on('load', disableButton());
-$('.title, .url').on('click', enableButton());
+// $(document).on('load', disableButton());
+// $('.title, .url').on('click', enableButton());
 
 
 

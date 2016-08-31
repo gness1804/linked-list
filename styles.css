@@ -4,7 +4,9 @@ header {
   display: flex;
   justify-content: space-around;
 }
-
+.bookmark-list {
+  display: flex;
+}
 .read {
   color: magenta;
 }
