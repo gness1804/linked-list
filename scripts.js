@@ -66,6 +66,8 @@ function countTotalBookmarks() {
 
 $("#clear-read-buttons").on("click", function() {
   clearReadButtons();
+  determineCountOfReadAndUnread();
+  countTotalBookmarks();
 });
 
 function clearReadButtons () {
