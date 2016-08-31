@@ -8,6 +8,7 @@ header, footer {
   border: 3px solid darkblue;
   border-radius: 5%;
   margin: 10px 0 10px 0;
+  text-align: center;
 }
 .input-field {
   display: inline-block;
@@ -134,10 +135,10 @@ footer section {
     height: 55vh;
   }
   footer section{
-    display: inline-block;
-    /*flex-direction: column;
-    flex-wrap: wrap;
-    align-items: flex-start;*/
+    display: flex;
+    flex-direction: column;
+    /*flex-wrap: wrap;
+    align-items: flex-start;*/*/
   }
    .footer-direction, #totalRead, #totalUnread {
     display: inline-block;
