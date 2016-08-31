@@ -19,7 +19,7 @@ h1 {
 footer section {
   display: flex;
   text-align: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
 }
 
