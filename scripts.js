@@ -25,6 +25,7 @@ $('.submit').click( function() { //Static submit functionality
     return;
   }
   createBookmark(titleField, urlField);
+  countTotalBookmarks();
 });
 
 function createBookmark(x, y) { // creates a section containing the new bookmark, the bookmark itself, and the new buttons
@@ -34,15 +35,17 @@ function createBookmark(x, y) { // creates a section containing the new bookmark
 
 $(document).on('click', '.mark', function() { //marks bookmarks as read or unread
   $(this).parent().toggleClass("read");
-  // increaseReadCounter();
+  //Runs function to count read / unread bookmarks
+  determineCountOfReadAndUnread();
 });
 
 $(document).on('click', '.remove-mark', function () { // they click on "Remove Link" button
   $(this).parent().remove();
+  //Runs function to count total bookmarks
   countTotalBookmarks();
+  //Runs function to count read / unread bookmarks
   determineCountOfReadAndUnread();
 });
-
 
 $("#testReadAndUnread").click(function () { //Read and Unread Button functionality
   determineCountOfReadAndUnread();
