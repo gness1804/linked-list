@@ -58,14 +58,18 @@ h1 {
   border: 1px solid black;
   border-radius: .25em;
 }
-.submit {
+.submit, #testReadAndUnread, #clear-read-buttons, #buttonCountBookmarks {
   border: 1px solid black;
   background-color: lightblue;
   border-radius: 1em;
 }
 
-.submit:hover {
+.submit:hover, #testReadAndUnread:hover, #clear-read-buttons:hover, #buttonCountBookmarks:hover {
   background-color: rgb(144, 232, 143);
+}
+
+#clear-read-buttons {
+  margin-left: 20px;
 }
 
 .titleResult, .urlResult{
