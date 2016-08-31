@@ -113,3 +113,28 @@ footer section {
   color: white;
   border: 3px solid lightblue;
 }
+
+@media screen and (max-width: 550px) {
+  .bookmark {
+    width: 80%;
+  }
+  footer section{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  #clear-read-buttons, #mark-all-read-button, .footer-direction, #totalRead, #totalUnread {
+    display: flex;
+    justify-content: space-between;
+  }
+  #clear-read-buttons, #mark-all-read-button {
+  }
+  /*footer-direction {
+    display: block;
+  }
+  button {
+    display: block;
+    float: none;
+  }*/
+}
