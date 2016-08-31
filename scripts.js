@@ -34,24 +34,24 @@ function createBookmark(x, y) { // creates a section containing the new bookmark
 
 var count = 0; // to count the number of links on the page, or the number of times the addBookmarkToCounter function gets fired
 
-function addBookmarkToCounter() {
+function addBookmarkToCounter() { // adds to the count of bookmarks on page
   count = count + 1;
   $("#how-many-bookmarks").text(count);
 }
 
-$(document).on('click', '.mark', function() {
+$(document).on('click', '.mark', function() { //marks bookmarks as read or unread
   $(this).parent().toggleClass("read");
 });
 
-$(document).on('click', '.remove-mark', function () {
+$(document).on('click', '.remove-mark', function () { // they click on "Remove Link" button
   $(this).parent().remove();
+  removeBookmarkFromCounter();
 });
 
-$('.remove').click( function() { //User clicks on "Remove"
-  $('.bookmark').remove();
-});
-
-//PHASE TWO
+function removeBookmarkFromCounter() {
+  count = count - 1;
+  $("#how-many-bookmarks").text(count);
+}
 
 function checkEmpty() { // data verification that user added input to both fields
   if ((titleField === '') && (urlField === '')) {
