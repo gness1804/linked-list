@@ -50,9 +50,9 @@ $("#testReadAndUnread").click(function () { //Read and Unread Button functionali
 
 function determineCountOfReadAndUnread() {
   var totalRead = $(".read").length;
-  $("#totalRead").text(totalRead + " " + "bookmarks have been read.");
+  $("#totalRead").text(totalRead + " " + "bookmarks have been read");
   var totalUnread = $(".bookmark").length - totalRead;
-  $("#totalUnread").text(totalUnread + " " + "bookmarks remain unread.");
+  $("#totalUnread").text(totalUnread + " " + "bookmarks remain unread");
 }
 
 $("#buttonCountBookmarks").on("click",  function() { //counts bookmarks on click
@@ -61,7 +61,7 @@ $("#buttonCountBookmarks").on("click",  function() { //counts bookmarks on click
 
 function countTotalBookmarks() {
   var totalBookmarks = $(".bookmark").length;
-    $('.footer-directions').html(totalBookmarks + " " + "bookmarks are on the page.");
+    $('.footer-directions').html(totalBookmarks + " " + "bookmarks are on the page");
   }
 
 $("#clear-read-buttons").on("click", function() {
@@ -72,6 +72,15 @@ $("#clear-read-buttons").on("click", function() {
 
 function clearReadButtons () {
   $(".read").remove();
+}
+
+$('#mark-all-read-button').on('click', function(){
+  markAllAsRead();
+  determineCountOfReadAndUnread();
+});
+
+function markAllAsRead () {
+  $('.bookmark').addClass('read');
 }
 
 function checkEmpty() { // data verification that user added input to both fields

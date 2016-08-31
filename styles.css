@@ -60,7 +60,7 @@ footer section {
   border-radius: .25em;
 }
 
-.submit, #clear-read-buttons {
+.submit, #clear-read-buttons, #mark-all-read-button {
   border: 1px solid black;
   background-color: lightblue;
   border-radius: 1em;
@@ -71,8 +71,9 @@ footer section {
   background-color: rgb(144, 232, 143);
 }
 
-#clear-read-buttons {
-  margin-left: 20px;
+#clear-read-buttons, #mark-all-read-button {
+  float: right;
+  display: inline-block;
 }
 
 .titleResult, .urlResult{
@@ -108,8 +109,4 @@ footer section {
 button[type=button]:hover {
   cursor: pointer;
   border: 3px solid #284907;
-}
-
-.footer-directions {
-  font-style: italic;
 }
