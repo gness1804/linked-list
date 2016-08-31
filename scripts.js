@@ -27,7 +27,7 @@ $('.submit').click( function() { //when they press the static submit button
 });
 
 function createBookmark(x, y) { // creates a section containing the new bookmark and the bookmark itself
-  var newBookmark = "<section class='bookmark'><p class='titleResult'>"+titleField+"</p><p class='urlResult'>"+urlField+"</p><button type='button' class='mark'>Mark as Read?</button><button class='remove-mark'>Remove Link</button></section>";
+  var newBookmark = "<section class='bookmark'><p class='titleResult'>"+titleField+"</p><p class='urlResult'>"+urlField+"</p><button type='button' class='mark'>Mark as Read?</button><button type='button' class='remove-mark'>Remove Link</button></section>";
   $('.bookmark-list').append(newBookmark);
   addBookmarkToCounter();
 }
