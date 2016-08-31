@@ -31,8 +31,10 @@ h1 {
   width: 100%;
   font-size: 1em;
   font-weight: bold;
-  margin-left: .5em;
-  margin-bottom: .5em;
+  /*margin-left: .5em;*/
+  text-align: center;
+  /*margin-bottom: .5em;*/
+  margin-bottom: 20px;
 }
 .bookmark {
   padding: .2em;
@@ -51,6 +53,7 @@ h1 {
   color: white;
 }
 .title, .url {
+  margin: 0px 10px;
   padding-left: .6em;
   border: 1px solid black;
   border-radius: .25em;
@@ -60,6 +63,11 @@ h1 {
   background-color: lightblue;
   border-radius: 1em;
 }
+
+.submit:hover {
+  background-color: rgb(144, 232, 143);
+}
+
 .titleResult, .urlResult{
   font-size: .8em;
   display: inline-block;
@@ -71,6 +79,11 @@ h1 {
   border-radius: .5em;
   margin-left: .5em;
 }
+
+.mark:hover, .remove-mark:hover {
+  background-color: white;
+}
+
 .bookmark:hover {
   height: auto;
   background-color: #284907;
