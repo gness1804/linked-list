@@ -14,31 +14,27 @@
   <body>
     <header>
     <h1> A Linked List </h1>
-      <input type="text" placeholder="Title" class="title">
-      <!-- Input field for URL -->
-      <input type="url" placeholder="URL" class="url">
-      <!-- Button for submitting bookmark -->
-      <button type="button" class="submit" disabled> Submit! </button>
+      <section class="input-field">
+        <!-- Input field for title -->
+        <input type="text" placeholder="Title" class="title">
+        <!-- Input field for URL -->
+        <input type="url" placeholder="URL" class="url">
+        <!-- Button for submitting bookmark -->
+        <button type="button" class="submit" disabled> Submit! </button>
+      </section>
     </header>
     <section class="bookmark-list">
       <h3> Your Bookmark List! </h3>
       <!-- Bookmarks start populating here -->
-      <!-- Potentially formatted as table -->
     </section>
-    <!-- "Mark as Read" Button -->
-    <!-- <button type="button" class="mark-read"> Mark as Read! </button> -->
-    <!-- "Remove" Button -->
-    <!-- <button type="button" class="remove"> Remove! </button> -->
     <footer>
+      <!-- Section dynamically updates with new info -->
       <section>
-        <h3 class="footer-directions"> How many bookmarks are presently on the page? </h3>
-        <button type="button" id="buttonCountBookmarks">Total Bookmarks on Page?</button>
+        <h3 class="footer-directions"> How many bookmarks are on the page? </h3>
         <p id="totalBookmarks"></p>
         <br>
       </section>
       <section>
-        <h3 class="footer-directions">Click to see how many read and unread bookmarks there are</h3>
-        <button type="button" id="testReadAndUnread">Read and Unread</button>
         <p id="totalRead"></p>
         <p id="totalUnread"></p>
         <button type="button" id="clear-read-buttons">Clear Read Bookmarks</button>
