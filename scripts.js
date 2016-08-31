@@ -42,7 +42,7 @@ function addBookmarkToCounter() { // adds to the count of bookmarks on page
 
 $(document).on('click', '.mark', function() { //marks bookmarks as read or unread
   $(this).parent().toggleClass("read");
-  increaseReadCounter();
+  // increaseReadCounter();
 });
 
 $(document).on('click', '.remove-mark', function () { // they click on "Remove Link" button
@@ -55,10 +55,21 @@ function removeBookmarkFromCounter() {
   $("#how-many-bookmarks").text(count);
 }
 
-function increaseReadCounter() {
-  readCount = readCount + 1;
-  $("#tally-of-read-bookmarks").text(readCount);
+$("#testReadAndUnread").click(function () {
+  determineCountOfReadAndUnread();
+});
+
+function determineCountOfReadAndUnread() {
+  var totalRead = $(".read").length;
+  $("#totalRead").text(totalRead + " " + "bookmarks have been read.");
+  var totalUnread = $(".bookmark").length - totalRead;
+  $("#totalUnread").text(totalUnread + " " + "bookmarks remain unread.");
 }
+
+// function increaseReadCounter() {
+//   readCount = readCount + 1;
+//   $("#tally-of-read-bookmarks").text(readCount);
+// }
 
 function checkEmpty() { // data verification that user added input to both fields
   if ((titleField === '') && (urlField === '')) {
