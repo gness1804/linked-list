@@ -48,6 +48,7 @@ $(document).on('click', '.mark', function() { //marks bookmarks as read or unrea
 $(document).on('click', '.remove-mark', function () { // they click on "Remove Link" button
   $(this).parent().remove();
   removeBookmarkFromCounter();
+  determineCountOfReadAndUnread();
 });
 
 function removeBookmarkFromCounter() {
