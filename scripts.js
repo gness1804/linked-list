@@ -63,6 +63,22 @@ function checkEmpty() {
 //If user omits 'title' or 'URL' display error message upon clicking submit
 
 //PHASE THREE
+$(document).on('load', disableButton());
+$('.title, .url').on('click', enableButton());
+
+
+
+function disableButton() {
+  if ( (titleField === '') || (urlField === '') ){
+    $('.submit').prop("disabled", true);
+  }
+}
+function enableButton() {
+  debugger;
+  if ( ($('.title').val() !== '') && ($('.url').val() !== '') ) {
+    $('.submit').prop("disabled", false);
+  }
+}
 
 //Disable button for creating links IF A field is blank
 //Application should keep count of total number of links once they are submitted or removed
