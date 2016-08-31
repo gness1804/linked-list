@@ -9,11 +9,13 @@ header {
   justify-content: space-around;
   border: 3px solid darkblue;
   border-radius: 5%;
+  margin: 15px;
 }
 .bookmark-list {
   padding: 20px;
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: column, wrap;
+
 }
 .read {
   color: magenta;
