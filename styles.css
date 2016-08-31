@@ -1,11 +1,19 @@
 /* MAKE CODE RESPONSIVE ON MOBILE SIZED LAYOUTS */
 /* MAYBE FLEXBOXES */
+body {
+  font-family: 'Work Sans', sans-serif;
+}
 header {
+  padding: 15px;
   display: flex;
   justify-content: space-around;
+  border: 3px solid darkblue;
+  border-radius: 5%;
 }
 .bookmark-list {
+  padding: 20px;
   display: flex;
+  flex-wrap: wrap;
 }
 .read {
   color: magenta;
