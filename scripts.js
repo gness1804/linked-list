@@ -72,6 +72,14 @@ function determineCountOfReadAndUnread() {
 //   $("#tally-of-read-bookmarks").text(readCount);
 // }
 
+$("#clear-read-buttons").on("click", function() {
+  clearReadButtons();
+});
+
+function clearReadButtons () {
+  $(".read").remove();
+}
+
 function checkEmpty() { // data verification that user added input to both fields
   if ((titleField === '') && (urlField === '')) {
     alert('ERROR: PLEASE FILL IN BOTH FIELDS');
