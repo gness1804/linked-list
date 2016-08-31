@@ -1,8 +1,8 @@
 //Enables jQuery
 $(document).ready(function() {
 //Toggles submit button from disabled to enabled
-$(document).on('load', enableOrDisableButtons());
-$('.title, .url').on('keyup keydown', function () {
+$(document).on('load', enableOrDisableButtons()); //checks if data entry fields are empty on page load
+$('.title, .url').on('keyup keydown', function () { ///checks if data entry fields are empty when user types in data entry fields
   enableOrDisableButtons();
 });
 //If both fields are not empty (i.e. 'truthy') enable button
@@ -50,9 +50,9 @@ $("#testReadAndUnread").click(function () { //Read and Unread Button functionali
 
 function determineCountOfReadAndUnread() {
   var totalRead = $(".read").length;
-  $("#totalRead").text(totalRead + " " + "bookmarks have been read");
+  $("#totalRead").text(totalRead + " bookmarks have been read");
   var totalUnread = $(".bookmark").length - totalRead;
-  $("#totalUnread").text(totalUnread + " " + "bookmarks remain unread");
+  $("#totalUnread").text(totalUnread + " bookmarks remain unread");
 }
 
 $("#buttonCountBookmarks").on("click",  function() { //counts bookmarks on click
@@ -109,16 +109,5 @@ function validURL() {
     return false;
   }
   return true;
-}
-//Button disabling functions
-function disableButton() {
-  if ( (titleField === '') || (urlField === '') ){
-    $('.submit').prop("disabled", true);
-  }
-}
-function enableButton() {
-  if ( ($('.title').val() !== '') && ($('.url').val() !== '') ) {
-    $('.submit').prop("disabled", false);
-  }
 }
 }); // end of master jQuery function
