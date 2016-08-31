@@ -116,6 +116,7 @@ footer section {
 
 @media screen and (max-width: 550px) {
   header {
+    padding: 10px;
     text-align: center;
   }
   .title, .url, .submit {
@@ -133,15 +134,17 @@ footer section {
     height: 55vh;
   }
   footer section{
-    display: flex;
-    flex-direction: column;
+    display: inline-block;
+    /*flex-direction: column;
     flex-wrap: wrap;
-    align-items: flex-start;
+    align-items: flex-start;*/
   }
-  #clear-read-buttons, #mark-all-read-button, .footer-direction, #totalRead, #totalUnread {
-    display: flex;
-    justify-content: space-between;
+   .footer-direction, #totalRead, #totalUnread {
+    display: inline-block;
+    text-align: left;
   }
   #clear-read-buttons, #mark-all-read-button {
+    display: inline-block;
+    float: right;
   }
 }
