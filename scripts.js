@@ -138,8 +138,11 @@ function enableButton() {
 //[\w-]+(\.[\w-]+)+\.?  matches the domain name with a trailing dot
 //(:\d+)? matches the port
 //(\/\S*)?) matches the path
+// '?' denotes a "nongreedy" matching pattern;
 function validURL() {
-  var urlRegEx = /(^|\s)((https?:\/\/)?[\w-]+(\.[\w-]+)+\.?(:\d+)?(\/\S*)?)/;
+  var urlRegEx = new RegExp('^(https?:\/\/)?'+ //protocal
+'((([a-z\d]([a-z\d-]*[a-z\d])*)\.)+[a-z]{2,}|'+ //domain name
+'((\:\d+)?(\/[-a-z\d%_.~+]*)*'); // port and path
   if ($('.url').val() === urlRegEx) {
     return false;
   }
