@@ -29,16 +29,16 @@ $('.submit').click( function() { //when they press the static submit button
 function createBookmark(x, y) { // creates a section containing the new bookmark and the bookmark itself
   var newBookmark = "<section class='bookmark'><p class='titleResult'>"+titleField+"</p><p class='urlResult'>"+urlField+"</p><button type='button' class='mark'>Mark as Read?</button><button type='button' class='remove-mark'>Remove Link</button></section>";
   $('.bookmark-list').append(newBookmark);
-  addBookmarkToCounter();
+  // addBookmarkToCounter();
 }
 
 var count = 0; // to count the number of links on the page, or the number of times the addBookmarkToCounter function gets fired
 var readCount = 0;
 
-function addBookmarkToCounter() { // adds to the count of bookmarks on page
-  count = count + 1;
-  $("#how-many-bookmarks").text(count);
-}
+// function addBookmarkToCounter() { // adds to the count of bookmarks on page
+//   count = count + 1;
+//   $("#how-many-bookmarks").text(count);
+// }
 
 $(document).on('click', '.mark', function() { //marks bookmarks as read or unread
   $(this).parent().toggleClass("read");
@@ -47,14 +47,14 @@ $(document).on('click', '.mark', function() { //marks bookmarks as read or unrea
 
 $(document).on('click', '.remove-mark', function () { // they click on "Remove Link" button
   $(this).parent().remove();
-  removeBookmarkFromCounter();
+  // removeBookmarkFromCounter();
   determineCountOfReadAndUnread();
 });
 
-function removeBookmarkFromCounter() {
-  count = count - 1;
-  $("#how-many-bookmarks").text(count);
-}
+// function removeBookmarkFromCounter() {
+//   count = count - 1;
+//   $("#how-many-bookmarks").text(count);
+// }
 
 $("#testReadAndUnread").click(function () {
   determineCountOfReadAndUnread();
@@ -71,6 +71,23 @@ function determineCountOfReadAndUnread() {
 //   readCount = readCount + 1;
 //   $("#tally-of-read-bookmarks").text(readCount);
 // }
+
+$("#buttonCountBookmarks").on("click", function() {
+  countTotalBookmarks();
+  });
+
+function countTotalBookmarks() {
+  var totalBookmarks = $(".bookmark").length;
+  $("#totalBookmarks").text(totalBookmarks + " " + "bookmarks are on the page.");
+  }
+
+$("#clear-read-buttons").on("click", function() {
+  clearReadButtons();
+});
+
+function clearReadButtons () {
+  $(".read").remove();
+}
 
 function checkEmpty() { // data verification that user added input to both fields
   if ((titleField === '') && (urlField === '')) {
@@ -99,7 +116,6 @@ function disableButton() {
   }
 }
 function enableButton() {
-  debugger;
   if ( ($('.title').val() !== '') && ($('.url').val() !== '') ) {
     $('.submit').prop("disabled", false);
   }
