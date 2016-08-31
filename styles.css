@@ -1,5 +1,9 @@
 /* MAKE CODE RESPONSIVE ON MOBILE SIZED LAYOUTS */
 /* MAYBE FLEXBOXES */
+header {
+  display: flex;
+  justify-content: space-around;
+}
 
 .read {
   color: magenta;
