@@ -63,7 +63,7 @@ function countTotalBookmarks() {
     $('.footer-directions').html(totalBookmarks + " " + "bookmarks are on the page");
   }
 
-$("#clear-read-buttons").on("click", function() {
+$("#clear-read-button").on("click", function() {
   clearReadButtons();
   determineCountOfReadAndUnread();
   countTotalBookmarks();
