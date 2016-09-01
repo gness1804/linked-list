@@ -14,6 +14,12 @@ function enableOrDisableButtons() {
   }
 }
 
+$(".title-input, .url-input").on("keydown", function(key) {
+  if (key.which === 13) { // the enter key
+    runOneTurnOfSubmit();
+  }
+});
+
 $('.submit-new-bookmark').click( function() { //Static submit functionality
   runOneTurnOfSubmit();
 });
