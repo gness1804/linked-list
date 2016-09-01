@@ -16,6 +16,10 @@ a:hover {
   text-decoration: underline;
 }
 
+button:disabled:hover {
+  cursor: not-allowed;
+}
+
 header, footer {
   background-color: rgb(240,246,246);
   border-radius: 5%;

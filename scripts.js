@@ -19,7 +19,7 @@ $('.submit-new-bookmark').click( function() { //Static submit functionality
   runOneTurnOfSubmit();
 });
 
-$(".title-input, .url-input").on("keydown", function(key) { // adds functionality of running run turn of submitting a bookmark when the user presses "enter" in an input field; checks if both fields are truthy
+$(".title-input, .url-input").on("keydown", function(key) { // adds functionality of running one turn of submitting a bookmark when the user presses "enter" in an input field; checks if both fields are truthy
   if (key.which === 13) { // the enter key
     runOneTurnOfSubmit();
   }
