@@ -38,13 +38,15 @@ footer section {
   overflow: scroll;
   font-family: 'Noto Serif', serif;
 }
+
 .bookmark-list h3 {
   width: 100%;
-  font-size: 1em;
+  font-size: 24px;
   font-weight: bold;
   text-align: center;
   margin-bottom: .5em;
 }
+
 .bookmark {
   padding: .2em;
   height: auto;

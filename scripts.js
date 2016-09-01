@@ -8,14 +8,14 @@ $('.title-input, .url-input').on('keyup keydown', function () { ///checks if dat
 //If both fields are not empty (i.e. 'truthy') enable button
 function enableOrDisableButtons() {
   if ($('.title-input').val() && $('.url-input').val()) {
-    $('.submit').prop("disabled", false);
+    $('.submit-new-bookmark').prop("disabled", false);
   }
   else {
-    $('.submit').prop("disabled", true);
+    $('.submit-new-bookmark').prop("disabled", true);
   }
 }
 
-$('.submit').click( function() { //Static submit functionality
+$('.submit-new-bookmark').click( function() { //Static submit functionality
   titleField = $('.title-input').val();
   urlField = $('.url-input').val();
   if (checkEmpty()) {
