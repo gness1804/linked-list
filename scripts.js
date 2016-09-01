@@ -54,7 +54,7 @@ $(document).on('click', '.remove-mark', function () { // when they click on "Rem
 
   determineCountOfReadAndUnread(); //Runs function to count read / unread bookmarks
 });
-// stopped
+
 function determineCountOfReadAndUnread() {
   var totalRead = $(".read").length;
   $("#total-read-count").text(totalRead + " bookmarks have been read");
@@ -62,13 +62,9 @@ function determineCountOfReadAndUnread() {
   $("#total-unread-count").text(totalUnread + " bookmarks remain unread");
 }
 
-$("#buttonCountBookmarks").on("click",  function() { //counts bookmarks on click
-  countTotalBookmarks();
-  });
-
 function countTotalBookmarks() {
   var totalBookmarks = $(".bookmark").length;
-    $('.footer-directions').html(totalBookmarks + " " + "bookmarks are on the page");
+  $('.footer-directions').html(totalBookmarks + " " + "bookmarks are on the page");
   }
 
 $("#clear-read-button").on("click", function() {
@@ -108,7 +104,7 @@ function checkEmpty() { // data verification that user added input to both field
     return true;
   }
 }
-
+// stopped
 //REGEX
 function validURL() {
   var urlRegEx = new RegExp(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g); //From Kinan's Slack snippet
