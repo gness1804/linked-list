@@ -1,4 +1,3 @@
-//Enables jQuery
 $(document).ready(function() {
 //Toggles submit button from disabled to enabled
 $(document).on('load', enableOrDisableButtons()); //checks if data entry fields are empty on page load
@@ -50,9 +49,9 @@ $("#testReadAndUnread").click(function () { //Read and Unread Button functionali
 
 function determineCountOfReadAndUnread() {
   var totalRead = $(".read").length;
-  $("#totalRead").text(totalRead + " bookmarks have been read");
+  $("#total-read-count").text(totalRead + " bookmarks have been read");
   var totalUnread = $(".bookmark").length - totalRead;
-  $("#totalUnread").text(totalUnread + " bookmarks remain unread");
+  $("#total-unread-count").text(totalUnread + " bookmarks remain unread");
 }
 
 $("#buttonCountBookmarks").on("click",  function() { //counts bookmarks on click
