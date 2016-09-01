@@ -104,7 +104,7 @@ function checkEmpty() { // data verification that user added input to both field
     return true;
   }
 }
-// stopped
+
 //REGEX
 function validURL() {
   var urlRegEx = new RegExp(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g); //From Kinan's Slack snippet
