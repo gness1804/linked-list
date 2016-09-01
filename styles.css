@@ -10,6 +10,14 @@ header, footer {
   margin: 10px 0 10px 0;
   text-align: center;
 }
+
+footer {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .input-field {
   display: inline-block;
 }
@@ -17,12 +25,6 @@ h1 {
   font-size: 2em;
   font-weight: bold;
   display: inline-block;
-}
-footer section {
-  display: flex;
-  text-align: center;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .bookmark-list {
@@ -136,7 +138,7 @@ footer section {
   .bookmark-list {
     height: 55vh;
   }
-  footer section{
+  footer {
     display: flex;
     flex-direction: column;
     /*flex-wrap: wrap;
