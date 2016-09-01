@@ -1,4 +1,4 @@
-.bookmark-list {
+.bookmark-list, .bookmarks-container {
   align-items: flex-start;
   flex-direction: reverse;
   background-color: rgb(224,238,226);
@@ -11,6 +11,10 @@
   max-height: 60vh;
   overflow: scroll;
   padding: 15px;
+}
+
+.bookmarks-container {
+  border: none;
 }
 
 .bookmark-list h3 {
