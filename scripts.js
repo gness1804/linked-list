@@ -1,5 +1,4 @@
 $(document).ready(function() {
-
 $(document).on('load', enableOrDisableButtons()); //checks if data entry fields are empty on page load
 
 $('.title-input, .url-input').on('keyup keydown', function () { ///checks if data entry fields are empty when user types in these fields

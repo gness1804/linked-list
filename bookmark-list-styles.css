@@ -1,5 +1,6 @@
 .bookmark-list {
   align-items: flex-start;
+  flex-direction: reverse;
   background-color: rgb(224,238,226);
   border-radius: 5%;
   border: 3px solid darkgreen;
@@ -33,7 +34,7 @@
 
 .bookmark:hover {
   background-color: rgb(53, 204, 73);
-  border: 3px solid lightblue;
+  border: 3px solid darkblue;
   color: white;
   height: auto;
 }
