@@ -32,14 +32,14 @@
 }
 
 .bookmark:hover {
-  background-color: #284907;
+  background-color: rgb(53, 204, 73);
   border: 3px solid lightblue;
   color: white;
   height: auto;
 }
 
 .read {
-  background-color: #284907;
+  background-color: rgb(53, 204, 73);
   color: white;
 }
 
