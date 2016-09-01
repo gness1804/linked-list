@@ -25,7 +25,7 @@ $(".title-input, .url-input").on("keydown", function(key) { // adds functionalit
     runOneTurnOfSubmit();
   }
 });
-// stopped
+
 function runOneTurnOfSubmit() {
   titleField = $('.title-input').val();
   urlField = $('.url-input').val();
@@ -47,18 +47,14 @@ $(document).on('click', '.mark', function() { //marks bookmarks as read or unrea
   determineCountOfReadAndUnread();
 });
 
-$(document).on('click', '.remove-mark', function () { // they click on "Remove Link" button
+$(document).on('click', '.remove-mark', function () { // when they click on "Remove Link" button
   $(this).parent().remove();
-  //Runs function to count total bookmarks
-  countTotalBookmarks();
-  //Runs function to count read / unread bookmarks
-  determineCountOfReadAndUnread();
-});
 
-$("#testReadAndUnread").click(function () { //Read and Unread Button functionality
-  determineCountOfReadAndUnread();
-});
+  countTotalBookmarks(); //Runs function to count total bookmarks
 
+  determineCountOfReadAndUnread(); //Runs function to count read / unread bookmarks
+});
+// stopped
 function determineCountOfReadAndUnread() {
   var totalRead = $(".read").length;
   $("#total-read-count").text(totalRead + " bookmarks have been read");
