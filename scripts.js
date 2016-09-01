@@ -2,12 +2,12 @@
 $(document).ready(function() {
 //Toggles submit button from disabled to enabled
 $(document).on('load', enableOrDisableButtons()); //checks if data entry fields are empty on page load
-$('.title, .url').on('keyup keydown', function () { ///checks if data entry fields are empty when user types in data entry fields
+$('.title-input, .url-input').on('keyup keydown', function () { ///checks if data entry fields are empty when user types in data entry fields
   enableOrDisableButtons();
 });
 //If both fields are not empty (i.e. 'truthy') enable button
 function enableOrDisableButtons() {
-  if ($('.title').val() && $('.url').val()) {
+  if ($('.title-input').val() && $('.url-input').val()) {
     $('.submit').prop("disabled", false);
   }
   else {
@@ -16,8 +16,8 @@ function enableOrDisableButtons() {
 }
 
 $('.submit').click( function() { //Static submit functionality
-  titleField = $('.title').val();
-  urlField = $('.url').val();
+  titleField = $('.title-input').val();
+  urlField = $('.url-input').val();
   if (checkEmpty()) {
     return;
   }
@@ -105,7 +105,7 @@ function checkEmpty() { // data verification that user added input to both field
 //REGEX
 function validURL() {
   var urlRegEx = new RegExp(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g); //From Kinan's Slack snippet
-  if (urlRegEx.test($('.url').val())) {
+  if (urlRegEx.test($('.url-input').val())) {
     return false;
   }
   return true;
