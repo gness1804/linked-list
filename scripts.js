@@ -1,5 +1,4 @@
 $(document).ready(function() {
-
 $(document).on('load', enableOrDisableButtons()); //checks if data entry fields are empty on page load
 
 $('.title-input, .url-input').on('keyup keydown', function () { ///checks if data entry fields are empty when user types in these fields
@@ -37,7 +36,7 @@ function runOneTurnOfSubmit() {
 }
 
 function createBookmark(x, y) { // creates a section containing the new bookmark, the bookmark itself, and the new buttons
-  var newBookmark = "<section class='bookmark'><p class='bookmark-title-output'>"+titleField+"</p><a class='bookmark-url-output' href='"+urlField+"' target='blank'>"+urlField+"</a><button type='button' class='mark'>Mark as Read?</button><button type='button' class='remove-mark'>Remove Link</button></section>";
+  var newBookmark = "<section class='bookmark'><p class='bookmark-title-output'>"+titleField+"</p><a class='bookmark-url-output' href='"+urlField+"' target='blank' type='url' pattern='https?://.+' required>"+urlField+"</a><button type='button' class='mark'>Mark as Read?</button><button type='button' class='remove-mark'>Remove Link</button></section>";
   $('.bookmark-list').append(newBookmark);
 }
 
@@ -107,7 +106,7 @@ function checkEmpty() { // data verification that user added input to both field
 
 //REGEX
 function validURL() {
-  var urlRegEx = new RegExp(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g); //From Kinan's Slack snippet
+  var urlRegEx = new RegExp(/(http(s)?:\/\/.)(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g); //From Kinan's Slack snippet
   if (urlRegEx.test($('.url-input').val())) {
     return false;
   }
