@@ -1,9 +1,11 @@
 $(document).ready(function() {
-//Toggles submit button from disabled to enabled
+
 $(document).on('load', enableOrDisableButtons()); //checks if data entry fields are empty on page load
-$('.title-input, .url-input').on('keyup keydown', function () { ///checks if data entry fields are empty when user types in data entry fields
+
+$('.title-input, .url-input').on('keyup keydown', function () { ///checks if data entry fields are empty when user types in these fields
   enableOrDisableButtons();
 });
+
 //If both fields are not empty (i.e. 'truthy') enable button
 function enableOrDisableButtons() {
   if ($('.title-input').val() && $('.url-input').val()) {
@@ -14,16 +16,16 @@ function enableOrDisableButtons() {
   }
 }
 
-$(".title-input, .url-input").on("keydown", function(key) {
-  if (key.which === 13) { // the enter key
-    runOneTurnOfSubmit();
-  }
-});
-
 $('.submit-new-bookmark').click( function() { //Static submit functionality
   runOneTurnOfSubmit();
 });
 
+$(".title-input, .url-input").on("keydown", function(key) { // adds functionality of running run turn of submitting a bookmark when the user presses "enter" in an input field; checks if both fields are truthy
+  if (key.which === 13) { // the enter key
+    runOneTurnOfSubmit();
+  }
+});
+// stopped
 function runOneTurnOfSubmit() {
   titleField = $('.title-input').val();
   urlField = $('.url-input').val();
