@@ -1,0 +1,15 @@
+/*see master for header, footer {}*/
+/*.submit-new-bookmark, #clear-read-button, #mark-all-read-button {} : master styles*/
+/*.submit-new-bookmark:hover, #clear-read-button:hover, #mark-all-read-button:hover {} : master styles*/
+
+footer {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+#clear-read-button, #mark-all-read-button {
+  display: inline-block;
+  float: right;
+}

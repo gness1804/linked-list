@@ -7,37 +7,34 @@
     <link rel="stylesheet" style="text/css" href="reset.css"/>
     <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
-    <!-- <link rel="icon" href="favicon.ico" type="image/x-icon"> -->
-    <link rel="stylesheet" style="text/css" href="styles.css"/>
-    <title></title>
+    <link rel="stylesheet" style="text/css" href="master-styles.css"/>
+    <link rel="stylesheet" style="text/css" href="header-styles.css"/>
+    <link rel="stylesheet" style="text/css" href="bookmark-list-styles.css"/>
+    <link rel="stylesheet" style="text/css" href="footer-styles.css"/>
+    <link rel="stylesheet" style="text/css" href="media-queries.css"/>
+    <title>Bookmark Favorite Sites!</title>
   </head>
   <body>
     <header>
-    <h1> A Linked List </h1>
+    <h1>My Favorite Sites:</h1>
       <section class="input-field">
-        <!-- Input field for title -->
-        <input type="text" placeholder="Title" class="title">
-        <!-- Input field for URL -->
-        <input type="url" placeholder="URL" class="url">
-        <!-- Button for submitting bookmark -->
-        <button type="button" class="submit" disabled> Submit! </button>
+        <input type="text" placeholder="Title" class="title-input">
+        <input type="url" placeholder="URL (full URL with http(s), please)" class="url-input">
+        <button type="button" class="submit-new-bookmark" disabled> Submit! </button>
       </section>
     </header>
     <section class="bookmark-list">
-      <h3> Bookmarks </h3>
-      <!-- Bookmarks start populating here -->
+      <h3>Bookmarks</h3>
+      <!-- Bookmarks populate here -->
     </section>
     <footer>
-      <!-- Section dynamically updates with new info -->
-      <section>
-        <p id="totalRead"></p>
-        <p id="totalUnread"></p>
-        <h3 class="footer-directions"> Create some bookmarks! </h3>
-        <button type="button" id="mark-all-read-button">Mark All As Read</button>
-        <button type="button" id="clear-read-buttons">Clear Read Bookmarks</button>
-      </section>
+      <!-- Dynamically updates with new info -->
+      <p id="total-read-count"></p>
+      <p id="total-unread-count"></p>
+      <h3 class="footer-directions">Create some bookmarks!</h3>
+      <button type="button" id="mark-all-read-button">Mark All As Read</button>
+      <button type="button" id="clear-read-button">Clear Read Bookmarks</button>
     </footer>
-
     <script src="scripts.js"></script>
   </body>
 </html>

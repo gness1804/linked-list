@@ -1,32 +1,43 @@
-//Enables jQuery
 $(document).ready(function() {
-//Toggles submit button from disabled to enabled
+
 $(document).on('load', enableOrDisableButtons()); //checks if data entry fields are empty on page load
-$('.title, .url').on('keyup keydown', function () { ///checks if data entry fields are empty when user types in data entry fields
+
+$('.title-input, .url-input').on('keyup keydown', function () { ///checks if data entry fields are empty when user types in these fields
   enableOrDisableButtons();
 });
+
 //If both fields are not empty (i.e. 'truthy') enable button
 function enableOrDisableButtons() {
-  if ($('.title').val() && $('.url').val()) {
-    $('.submit').prop("disabled", false);
+  if ($('.title-input').val() && $('.url-input').val()) {
+    $('.submit-new-bookmark').prop("disabled", false);
   }
   else {
-    $('.submit').prop("disabled", true);
+    $('.submit-new-bookmark').prop("disabled", true);
   }
 }
 
-$('.submit').click( function() { //Static submit functionality
-  titleField = $('.title').val();
-  urlField = $('.url').val();
+$('.submit-new-bookmark').click( function() { //Static submit functionality
+  runOneTurnOfSubmit();
+});
+
+$(".title-input, .url-input").on("keydown", function(key) { // adds functionality of running run turn of submitting a bookmark when the user presses "enter" in an input field; checks if both fields are truthy
+  if (key.which === 13) { // the enter key
+    runOneTurnOfSubmit();
+  }
+});
+
+function runOneTurnOfSubmit() {
+  titleField = $('.title-input').val();
+  urlField = $('.url-input').val();
   if (checkEmpty()) {
     return;
   }
   createBookmark(titleField, urlField);
   countTotalBookmarks();
-});
+}
 
 function createBookmark(x, y) { // creates a section containing the new bookmark, the bookmark itself, and the new buttons
-  var newBookmark = "<section class='bookmark'><p class='titleResult'>"+titleField+"</p><p class='urlResult'>"+urlField+"</p><button type='button' class='mark'>Mark as Read?</button><button type='button' class='remove-mark'>Remove Link</button></section>";
+  var newBookmark = "<section class='bookmark'><p class='bookmark-title-output'>"+titleField+"</p><a class='bookmark-url-output' href='"+urlField+"' target='blank'>"+urlField+"</a><button type='button' class='mark'>Mark as Read?</button><button type='button' class='remove-mark'>Remove Link</button></section>";
   $('.bookmark-list').append(newBookmark);
 }
 
@@ -36,35 +47,27 @@ $(document).on('click', '.mark', function() { //marks bookmarks as read or unrea
   determineCountOfReadAndUnread();
 });
 
-$(document).on('click', '.remove-mark', function () { // they click on "Remove Link" button
+$(document).on('click', '.remove-mark', function () { // when they click on "Remove Link" button
   $(this).parent().remove();
-  //Runs function to count total bookmarks
-  countTotalBookmarks();
-  //Runs function to count read / unread bookmarks
-  determineCountOfReadAndUnread();
-});
 
-$("#testReadAndUnread").click(function () { //Read and Unread Button functionality
-  determineCountOfReadAndUnread();
+  countTotalBookmarks(); //Runs function to count total bookmarks
+
+  determineCountOfReadAndUnread(); //Runs function to count read / unread bookmarks
 });
 
 function determineCountOfReadAndUnread() {
   var totalRead = $(".read").length;
-  $("#totalRead").text(totalRead + " bookmarks have been read");
+  $("#total-read-count").text(totalRead + " bookmarks have been read");
   var totalUnread = $(".bookmark").length - totalRead;
-  $("#totalUnread").text(totalUnread + " bookmarks remain unread");
+  $("#total-unread-count").text(totalUnread + " bookmarks remain unread");
 }
-
-$("#buttonCountBookmarks").on("click",  function() { //counts bookmarks on click
-  countTotalBookmarks();
-  });
 
 function countTotalBookmarks() {
   var totalBookmarks = $(".bookmark").length;
-    $('.footer-directions').html(totalBookmarks + " " + "bookmarks are on the page");
+  $('.footer-directions').html(totalBookmarks + " " + "bookmarks are on the page");
   }
 
-$("#clear-read-buttons").on("click", function() {
+$("#clear-read-button").on("click", function() {
   clearReadButtons();
   determineCountOfReadAndUnread();
   countTotalBookmarks();
@@ -105,7 +108,7 @@ function checkEmpty() { // data verification that user added input to both field
 //REGEX
 function validURL() {
   var urlRegEx = new RegExp(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g); //From Kinan's Slack snippet
-  if (urlRegEx.test($('.url').val())) {
+  if (urlRegEx.test($('.url-input').val())) {
     return false;
   }
   return true;

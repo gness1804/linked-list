@@ -1,0 +1,39 @@
+body {
+  font-family: 'Work Sans', sans-serif;
+  margin: 15px;
+}
+
+a:link {
+  text-decoration: none;
+  color: rgb(121, 19, 99);
+}
+
+a:visited {
+  color: rgb(170, 40, 8);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+header, footer {
+  background-color: rgb(240,246,246);
+  border-radius: 5%;
+  border: 3px solid darkblue;
+  margin: 10px 0;
+  padding: 15px;
+  text-align: center;
+}
+
+.submit-new-bookmark, #clear-read-button, #mark-all-read-button {
+  background-color: lightblue;
+  border-radius: 1em;
+  border: 1px solid black;
+  max-height: 30px;
+}
+
+.submit-new-bookmark:hover, #clear-read-button:hover, #mark-all-read-button:hover {
+  background-color: rgb(144, 232, 143);
+  border: 3px solid #284907;
+  cursor: pointer;
+}

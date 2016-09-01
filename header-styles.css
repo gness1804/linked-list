@@ -1,0 +1,20 @@
+/*see master for header, footer {}*/
+/*.submit-new-bookmark, #clear-read-button, #mark-all-read-button {} : master styles*/
+/*.submit-new-bookmark:hover, #clear-read-button:hover, #mark-all-read-button:hover {} : master styles*/
+
+h1 {
+  display: inline-block;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.input-field {
+  display: inline-block;
+}
+
+.title-input, .url-input {
+  border-radius: .25em;
+  border: 1px solid black;
+  margin: 0px 10px;
+  padding-left: .6em;
+}

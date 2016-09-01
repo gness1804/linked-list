@@ -1,0 +1,67 @@
+.bookmark-list {
+  align-items: flex-start;
+  background-color: rgb(224,238,226);
+  border-radius: 5%;
+  border: 3px solid darkgreen;
+  display: flex;
+  flex-wrap: wrap;
+  font-family: 'Noto Serif', serif;
+  justify-content: center;
+  max-height: 60vh;
+  overflow: scroll;
+  padding: 15px;
+}
+
+.bookmark-list h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: .5em;
+  text-align: center;
+  width: 100%;
+}
+
+.bookmark {
+  background-color: white;
+  border-radius: 5%;
+  border: .5px solid black;
+  font-family: 'Noto Serif', serif;
+  margin-bottom: .5em;
+  margin-left: .5em;
+  padding: .2em;
+  width: auto;
+}
+
+.bookmark:hover {
+  background-color: rgb(53, 204, 73);
+  border: 3px solid lightblue;
+  color: white;
+  height: auto;
+}
+
+.read {
+  background-color: rgb(53, 204, 73);
+  color: white;
+}
+
+.bookmark-title-output, .bookmark-url-output{
+  display: block;
+  font-size: .8em;
+  margin-bottom: 5px;
+  margin-left: .5em;
+}
+
+.bookmark-title-output {
+  font-weight: bolder;
+}
+
+.mark, .remove-mark{
+  background-color: lightgreen;
+  border-radius: .5em;
+  border: 1px solid black;
+  margin-left: .5em;
+  margin-top: 10px;
+}
+
+.mark:hover, .remove-mark:hover {
+  background-color: white;
+}
