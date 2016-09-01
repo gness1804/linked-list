@@ -1,0 +1,37 @@
+.bookmark-list {
+  align-items: flex-start;
+  background-color: rgb(224,238,226);
+  border-radius: 5%;
+  border: 3px solid darkgreen;
+  display: flex;
+  flex-wrap: wrap;
+  font-family: 'Noto Serif', serif;
+  justify-content: center;
+  max-height: 60vh;
+  overflow: scroll;
+  padding: 15px;
+}
+
+.bookmark-list h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: .5em;
+  text-align: center;
+  width: 100%;
+}
+
+.bookmark {
+  background-color: white;
+  border-radius: 5%;
+  border: .5px solid black;
+  font-family: 'Noto Serif', serif;
+  margin-bottom: .5em;
+  margin-left: .5em;
+  padding: .2em;
+  width: auto;
+}
+
+.read {
+  background-color: #284907;
+  color: white;
+}

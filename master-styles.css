@@ -2,68 +2,35 @@ body {
   font-family: 'Work Sans', sans-serif;
   margin: 15px;
 }
+
 header, footer {
   padding: 15px;
   background-color: rgb(240,246,246);
   border: 3px solid darkblue;
   border-radius: 5%;
-  margin: 10px 0 10px 0;
+  margin: 10px 0;
   text-align: center;
 }
 
-footer {
-  display: flex;
-  text-align: center;
-  justify-content: space-between;
-  align-items: center;
-}
 
-.input-field {
-  display: inline-block;
-}
-h1 {
-  font-size: 2em;
-  font-weight: bold;
-  display: inline-block;
-}
 
-.bookmark-list {
-  max-height: 60vh;
-  padding: 15px;
-  display: flex;
-  background-color: rgb(224,238,226);
-  border-radius: 5%;
-  border: 3px solid darkgreen;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  overflow: scroll;
-  font-family: 'Noto Serif', serif;
-}
 
-.bookmark-list h3 {
-  width: 100%;
-  font-size: 24px;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: .5em;
-}
 
-.bookmark {
-  padding: .2em;
-  height: auto;
-  width: auto;
-  border-radius: 5%;
-  background-color: white;
-  border: .5px solid black;
-  margin-left: .5em;
-  margin-bottom: .5em;
-  font-family: 'Noto Serif', serif;
-}
-.read {
-  background-color: #284907;
-  color: white;
-}
+
+
+
+
+
+
+
+
+/*stopped*/
+
+
+
+
+
+
 .title-input, .url-input {
   margin: 0px 10px;
   padding-left: .6em;

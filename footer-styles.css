@@ -1,0 +1,8 @@
+/*see master for header, footer {}*/
+
+footer {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
