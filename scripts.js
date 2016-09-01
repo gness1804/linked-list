@@ -35,7 +35,7 @@ function runOneTurnOfSubmit() {
 }
 
 function createBookmark(x, y) { // creates a section containing the new bookmark, the bookmark itself, and the new buttons
-  var newBookmark = "<section class='bookmark'><p class='titleResult'>"+titleField+"</p><p class='urlResult'>"+urlField+"</p><button type='button' class='mark'>Mark as Read?</button><button type='button' class='remove-mark'>Remove Link</button></section>";
+  var newBookmark = "<section class='bookmark'><p class='bookmark-title-output'>"+titleField+"</p><p class='bookmark-url-output'>"+urlField+"</p><button type='button' class='mark'>Mark as Read?</button><button type='button' class='remove-mark'>Remove Link</button></section>";
   $('.bookmark-list').append(newBookmark);
 }
 

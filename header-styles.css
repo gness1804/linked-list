@@ -1,4 +1,6 @@
 /*see master for header, footer {}*/
+/*.submit-new-bookmark, #clear-read-button, #mark-all-read-button {} : master styles*/
+/*.submit-new-bookmark:hover, #clear-read-button:hover, #mark-all-read-button:hover {} : master styles*/
 
 h1 {
   display: inline-block;
@@ -8,4 +10,11 @@ h1 {
 
 .input-field {
   display: inline-block;
+}
+
+.title-input, .url-input {
+  margin: 0px 10px;
+  padding-left: .6em;
+  border: 1px solid black;
+  border-radius: .25em;
 }

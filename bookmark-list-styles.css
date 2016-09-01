@@ -35,3 +35,26 @@
   background-color: #284907;
   color: white;
 }
+
+.bookmark-title-output, .bookmark-url-output{
+  display: block;
+  font-size: .8em;
+  margin-bottom: 5px;
+  margin-left: .5em;
+}
+
+.bookmark-title-output {
+  font-weight: bolder;
+}
+
+.mark, .remove-mark{
+  background-color: lightgreen;
+  border-radius: .5em;
+  border: 1px solid black;
+  margin-left: .5em;
+  margin-top: 10px;
+}
+
+.mark:hover, .remove-mark:hover {
+  background-color: white;
+}

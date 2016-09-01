@@ -12,32 +12,6 @@ header, footer {
   text-align: center;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-/*stopped*/
-
-
-
-
-
-
-.title-input, .url-input {
-  margin: 0px 10px;
-  padding-left: .6em;
-  border: 1px solid black;
-  border-radius: .25em;
-}
-
 .submit-new-bookmark, #clear-read-button, #mark-all-read-button {
   border: 1px solid black;
   background-color: lightblue;
@@ -51,33 +25,11 @@ header, footer {
   border: 3px solid #284907;
 }
 
-#clear-read-button, #mark-all-read-button {
-  float: right;
-  display: inline-block;
-}
 
-.titleResult, .urlResult{
-  font-size: .8em;
-  display: block;
-  margin-left: .5em;
-  margin-bottom: 5px;
-}
+/*stopped*/
 
-.titleResult {
-  font-weight: bolder;
-}
 
-.mark, .remove-mark{
-  border: 1px solid black;
-  background-color: lightgreen;
-  border-radius: .5em;
-  margin-left: .5em;
-  margin-top: 10px;
-}
 
-.mark:hover, .remove-mark:hover {
-  background-color: white;
-}
 
 .bookmark:hover {
   height: auto;
