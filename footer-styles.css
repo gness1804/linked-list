@@ -10,6 +10,6 @@ footer {
 }
 
 #clear-read-button, #mark-all-read-button {
-  float: right;
   display: inline-block;
+  float: right;
 }

@@ -1,0 +1,40 @@
+@media screen and (max-width: 550px) {
+
+  header {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .title-input, .url-input, .submit-new-bookmark {
+    display: inline-block;
+    margin: 1vh 0;
+    text-align: center;
+    width: 60%;
+  }
+
+  .bookmark-list {
+    height: 55vh;
+  }
+
+  .bookmark {
+    align-items: flex-start;
+    max-height: 100px;
+    width: 80%;
+  }
+
+  #clear-read-button, #mark-all-read-button {
+    display: inline-block;
+    float: right;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-direction, #total-read-count, #total-unread-count {
+    display: inline-block;
+    text-align: left;
+  }
+
+}

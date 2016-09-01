@@ -31,6 +31,13 @@
   width: auto;
 }
 
+.bookmark:hover {
+  background-color: #284907;
+  border: 3px solid lightblue;
+  color: white;
+  height: auto;
+}
+
 .read {
   background-color: #284907;
   color: white;
