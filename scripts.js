@@ -15,6 +15,10 @@ function enableOrDisableButtons() {
 }
 
 $('.submit-new-bookmark').click( function() { //Static submit functionality
+  runOneTurnOfSubmit();
+});
+
+function runOneTurnOfSubmit() {
   titleField = $('.title-input').val();
   urlField = $('.url-input').val();
   if (checkEmpty()) {
@@ -22,7 +26,7 @@ $('.submit-new-bookmark').click( function() { //Static submit functionality
   }
   createBookmark(titleField, urlField);
   countTotalBookmarks();
-});
+}
 
 function createBookmark(x, y) { // creates a section containing the new bookmark, the bookmark itself, and the new buttons
   var newBookmark = "<section class='bookmark'><p class='titleResult'>"+titleField+"</p><p class='urlResult'>"+urlField+"</p><button type='button' class='mark'>Mark as Read?</button><button type='button' class='remove-mark'>Remove Link</button></section>";
